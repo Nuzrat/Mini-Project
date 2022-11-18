@@ -1,0 +1,28 @@
+{% extends 'temp/it_administrator.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <table border="1">
+        <tr>
+            <th>ASSET</th>
+            <th>DEPARTMENT</th>
+            <th>EMPLOYEE</th>
+        </tr>
+        {% for i in x %}
+        <tr>
+            <td>{{ i.asset.asset }}</td>
+            <td>{{ i.dept.department }}</td>
+            <td>{{ i.emp.name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</center>
+</body>
+</html>
+{% endblock %}
